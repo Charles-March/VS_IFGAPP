@@ -1,0 +1,4 @@
+Inforges_Application.MainActivity, InfApp;md58c8cdad0ac5fc81435bdff837bfe6fa9.MainActivity
+Inforges_Application.MainActivity, InfApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md58c8cdad0ac5fc81435bdff837bfe6fa9.MainActivity
+Inforges_Application.MainActivity;md58c8cdad0ac5fc81435bdff837bfe6fa9.MainActivity
+inforges_application.MainActivity;md58c8cdad0ac5fc81435bdff837bfe6fa9.MainActivity
