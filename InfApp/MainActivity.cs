@@ -23,11 +23,12 @@ namespace Inforges_Application
 
         EditText InEditText;
         TextView InTextView;
+        AutoCompleteTextView InAutoCompleteText;
 
         string FinalItemID;
         int FinalQuantity;
         float FinalPriceUnit;
-
+        string FinalAccountAux;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -65,6 +66,21 @@ namespace Inforges_Application
             if (itemID == "01") return "coucou";
             else return "aurevoir";
         }
+
+        string getAccount(string itemID)
+        {
+            return "X45487D4897-01-001-01";
+        }
+
+        IListAdapter getAccountList(string itemID)
+        {
+            string[] list = new string[2];
+            list[0] = "compte1";
+            list[1] = "compte2";
+
+            ArrayAdapter adapt = new ArrayAdapter(this, Resource.Layout.AccountListItem,list);
+            return adapt;
+        }
         /*#####################*/
 #endregion
 
@@ -74,8 +90,9 @@ namespace Inforges_Application
 
             SetContentView(Resource.Layout.InMainWindow);
             InValidate = FindViewById<Button>(Resource.Id.InItemIdValidation);
-            InEditText = FindViewById<EditText>(Resource.Id.EditTextItemID);
-
+            InEditText = FindViewById<EditText>(Resource.Id.InEditTextItemID);
+            
+            InBack = FindViewById<Button>(Resource.Id.InToMain);
             InBack.Click += delegate
             {
                 Activate_main();
@@ -83,7 +100,7 @@ namespace Inforges_Application
 
             InValidate.Click += delegate
             {
-                if (FindViewById<EditText>(Resource.Id.EditTextItemID).Text != "")
+                if (FindViewById<EditText>(Resource.Id.InEditTextItemID).Text != "")
                 {
 
                     string itemID = InEditText.Text;
@@ -115,26 +132,35 @@ namespace Inforges_Application
         void In_Quantity()
         {
             SetContentView(Resource.Layout.InMainWindow);
+
+            InValidate = FindViewById<Button>(Resource.Id.InItemIdValidation);
+            InEditText = FindViewById<EditText>(Resource.Id.InEditTextItemID);
+            InTextView = FindViewById<TextView>(Resource.Id.InItemIdText);
+
             InTextView.Text = GetString(Resource.String.ItemQuantityText);
             InEditText.Text = "";
             InEditText.InputType = Android.Text.InputTypes.ClassNumber;
 
-            InValidate = FindViewById<Button>(Resource.Id.InItemIdValidation);
 
             InValidate.Click += delegate
             {
                 if (InEditText.Text != "")
                 {
                     FinalQuantity = int.Parse(InEditText.Text);
-                    In_Price();
+                    In_PriceUnit();
                 }
             };
 
         }
 
-        void In_Price()
+        void In_PriceUnit()
         {
             SetContentView(Resource.Layout.InMainWindow);
+
+            InValidate = FindViewById<Button>(Resource.Id.InItemIdValidation);
+            InEditText = FindViewById<EditText>(Resource.Id.InEditTextItemID);
+            InTextView = FindViewById<TextView>(Resource.Id.InItemIdText);
+
             InTextView.Text = GetString(Resource.String.ItemPriceUnitText);
             InEditText.Text = "";
             InEditText.InputType = Android.Text.InputTypes.NumberFlagDecimal;
@@ -145,13 +171,50 @@ namespace Inforges_Application
             {
                 if (InEditText.Text != "")
                 {
-
                     FinalPriceUnit = int.Parse(InEditText.Text);
-              
+                    In_AccountAux();
                 }
             };
         }
-    }
 
-}
+        void In_AccountAux()
+        {
+            SetContentView(Resource.Layout.InMainWindow);
+
+            InAutoCompleteText = FindViewById<AutoCompleteTextView>(Resource.Id.InACT);
+            InValidate = FindViewById<Button>(Resource.Id.InItemIdValidation);
+            InEditText = FindViewById<EditText>(Resource.Id.InEditTextItemID);
+            InTextView = FindViewById<TextView>(Resource.Id.InItemIdText);
+
+            InTextView.Text = GetString(Resource.String.ItemAccountAuxText);
+
+            InAutoCompleteText.SetHeight(InEditText.Height);
+            InEditText.SetHeight(0);
+            InEditText.Enabled = false;
+            InAutoCompleteText.Adapter = getAccountList(FinalItemID);
+            InAutoCompleteText.Text = getAccount(FinalItemID);
+
+  
+
+            InValidate.Click += delegate
+            {
+                if (InEditText.Text != "")
+                {
+                    FinalAccountAux = InAutoCompleteText.Text;
+                    In_AccountAux();
+                }
+            };
+        }
+
+
+
+
+
+
+        /*
+        InEditText.Text = getAccount(FinalItemID);
+        InEditText.InputType = Android.Text.InputTypes.TextFlagAutoComplete;
+        */
+    }
+    }
 

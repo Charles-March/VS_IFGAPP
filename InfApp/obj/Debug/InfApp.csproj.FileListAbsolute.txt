@@ -33,3 +33,4 @@ C:\Users\pardo\Documents\Visual Studio 2017\Projects\InfApp\VS_IFGAPP\InfApp\obj
 C:\Users\pardo\Documents\Visual Studio 2017\Projects\InfApp\VS_IFGAPP\InfApp\bin\Debug\InfApp.dll.mdb
 C:\Users\pardo\Documents\Visual Studio 2017\Projects\InfApp\VS_IFGAPP\InfApp\obj\Debug\android\assets\InfApp.dll.mdb
 C:\Users\pardo\Documents\Visual Studio 2017\Projects\InfApp\VS_IFGAPP\InfApp\obj\Debug\InfApp.csprojResolveAssemblyReference.cache
+C:\Users\pardo\Documents\Visual Studio 2017\Projects\InfApp\VS_IFGAPP\InfApp\obj\Debug\res\layout\accountlistitem.xml
