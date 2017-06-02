@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">Inforges_Application</string>
+
+  <string name="ValidationButtonText">OK?!:</string>
+  <string name="ValidationTitle">Confirmacion</string>
+  <string name="Yes">Si</string>
+  <string name="Cancel">Cancelar</string>
+
+  <string name="ValidationInIdText">Este ID es correcto :</string>
+  <string name="ValidationDescrInText">Nombre del articulo : </string>
+  
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">Inforges_Application</string>
   
   <string name="InTitle">Recepción de mercancias</string>
   <string name="PickTitle">Picking</string>

@@ -5,7 +5,7 @@
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="InfApp" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
-    <activity android:icon="@drawable/icon" android:label="Inforges Application" android:name="md58c8cdad0ac5fc81435bdff837bfe6fa9.MainActivity">
+    <activity android:icon="@drawable/icon" android:label="Inforges Application" android:screenOrientation="landscape" android:theme="@android:style/Theme.Holo.Light" android:name="md58c8cdad0ac5fc81435bdff837bfe6fa9.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

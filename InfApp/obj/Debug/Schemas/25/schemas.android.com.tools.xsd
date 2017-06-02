@@ -2,7 +2,7 @@
 <xs:schema xmlns:tools="http://schemas.android.com/tools" attributeFormDefault="qualified" targetNamespace="http://schemas.android.com/tools" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v25</xs:documentation>
-    <xs:documentation>02/06/2017 10:55:26</xs:documentation>
+    <xs:documentation>02/06/2017 13:59:26</xs:documentation>
   </xs:annotation>
   <xs:attribute name="layout">
     <xs:annotation>
@@ -213,6 +213,7 @@
         <xs:simpleType>
           <xs:restriction base="xs:string">
             <xs:enumeration value="@string/ApplicationName" />
+            <xs:enumeration value="@string/Cancel" />
             <xs:enumeration value="@string/Hello" />
             <xs:enumeration value="@string/InTitle" />
             <xs:enumeration value="@string/ItemAccountAux" />
@@ -230,6 +231,11 @@
             <xs:enumeration value="@string/PickTitle" />
             <xs:enumeration value="@string/RelocationTitle" />
             <xs:enumeration value="@string/ToFactTitle" />
+            <xs:enumeration value="@string/ValidationButtonText" />
+            <xs:enumeration value="@string/ValidationDescrInText" />
+            <xs:enumeration value="@string/ValidationInIdText" />
+            <xs:enumeration value="@string/ValidationTitle" />
+            <xs:enumeration value="@string/Yes" />
             <xs:enumeration value="@android:string/cancel" />
             <xs:enumeration value="@android:string/copy" />
             <xs:enumeration value="@android:string/copyUrl" />
